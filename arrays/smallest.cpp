@@ -9,15 +9,12 @@ int main(){
     int idx = 0;
 
     for(int i = 0; i < size; i ++){
-        smallest = min(arr[i], smallest);
-    }
-
-    // Returing index of the smallest element
-    for(int i = 0; i < size; i ++){
-        if(smallest = arr[i]){
+        if(arr[i]<smallest){
+            smallest = arr[i];
             idx = i;
         }
     }
+
 
     cout<<"\n Smallest number = "<<smallest<<endl;
     cout<<"\n Index of the smallest element = "<<idx<<endl;
