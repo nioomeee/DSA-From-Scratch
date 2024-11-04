@@ -20,6 +20,8 @@ int main(){
     // front
     cout<<"\n Front (1st value) of vector = "<<vec1.front();
 
+    // back
+    cout<<"\n Back (Last value) of vector = "<<vec1.back();
 
     for(int val : vec1){
         cout<<"\n " << val;
