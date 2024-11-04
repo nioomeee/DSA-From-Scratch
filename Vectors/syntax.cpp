@@ -9,7 +9,9 @@ int main(){
     
 
     cout<<vec1[0]<<endl;
-    cout<<vec2[0]<<endl;
+    for(int i : vec2){
+        cout<<i<<endl;
+    }
 
     return 0;
 }
