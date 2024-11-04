@@ -23,6 +23,9 @@ int main(){
     // back
     cout<<"\n Back (Last value) of vector = "<<vec1.back();
 
+    // at
+    cout<<"\n Vector at value 1 = "<<vec1.at(1);
+
     for(int val : vec1){
         cout<<"\n " << val;
     }
