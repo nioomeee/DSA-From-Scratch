@@ -23,6 +23,6 @@ int majority(vector <int>& nums){
 int main(){
     
     vector <int> vec = {1, 2, 2, 1, 1};
-    cout<<"\n the lement occuring majority times in the array = "<<majority(vec);
+    cout<<"\n the element occuring majority times in the array = "<<majority(vec);
     return 0;
 }
