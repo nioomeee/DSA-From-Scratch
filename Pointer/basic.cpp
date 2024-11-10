@@ -5,6 +5,14 @@ void changeA(int &b){ //& here is sign of alias which means a in main and b here
     b = 20;
 }
 
+void printarr(int arr[], int n){
+    cout<<"\n [ ";
+    for(int i = 0; i < n; i ++){
+        cout<<arr[i]<<" ";
+    }
+    cout<<"]"<<endl;
+}
+
 int main(){
     
     int a = 10;
@@ -33,6 +41,12 @@ int main(){
     changeA(a);
     cout<<"\n The value of a after pass by reference using alias = "<<a<<endl;
 
-    
+    // array pointers
+    int arr[]={1, 2, 3, 4, 5};
+    // the name of the array is itself a pointer pointing to the 0th index
+    int size = sizeof(arr)/sizeof(arr[0]);
+
+    cout<<"\n Printing array using it's name pointer: "<<endl;
+    printarr(arr, size);
     return 0;
 }
