@@ -1,6 +1,10 @@
 #include<iostream>
 using namespace std;
 
+void changeA(int &b){ //& here is sign of alias which means a in main and b here refer to same memory address
+    b = 20;
+}
+
 int main(){
     
     int a = 10;
@@ -21,6 +25,14 @@ int main(){
 
     // Null pointer
     int* ptr3 = NULL;
-    cout<<"\n he value stored at ptr3 = "<<ptr3<<endl;
+    cout<<"\n The value stored at ptr3 = "<<ptr3<<endl;
+
+    // pass by reference using alias
+    cout<<"\n The value of a before pass by reference using alias = "<<a<<endl;
+
+    changeA(a);
+    cout<<"\n The value of a after pass by reference using alias = "<<a<<endl;
+
+    
     return 0;
 }
