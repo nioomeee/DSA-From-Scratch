@@ -42,7 +42,7 @@ int main(){
     cout<<"\n The value of a after pass by reference using alias = "<<a<<endl;
 
     // array pointers
-    int arr[]={1, 2, 3, 4, 5};
+    int arr[]={1, 2, 3, 4, 5}; //arr her eis a constant pointer
     // the name of the array is itself a pointer pointing to the 0th index
     int size = sizeof(arr)/sizeof(arr[0]);
 
