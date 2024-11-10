@@ -8,5 +8,12 @@ int main(){
 
     int* ptr = &a;
     cout<<"\n Printing address using * and pointer variable = "<<ptr<<endl;
+
+    cout<<&ptr;
+
+    int** ptr2 = &ptr;
+    cout<<"\n Printing address of pointer using pointer to pointer variable = "<<ptr2<<endl;
+
+
     return 0;
 }
