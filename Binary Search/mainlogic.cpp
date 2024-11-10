@@ -25,7 +25,7 @@ int Solution(vector <int>& arr, int target){ //iterative code
 }
 
 int main(){
-    // array should always be sorted in binary search
+    // array should always be sorted for binary search
     vector <int> arr1 = {-1, 0, 3, 4, 5, 9, 12};
     int target1 = 12;
     

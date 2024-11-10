@@ -2,7 +2,7 @@
 #include<vector>
 using namespace std;
 
-int Solution(vector <int>& arr, int target){ //iterative code
+int Solution(vector <int>& arr, int target){ 
     int start = 0, mid;
     int n = arr.size();
     int end = n-1;
