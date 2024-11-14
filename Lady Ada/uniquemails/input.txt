@@ -1,0 +1,4 @@
+John Doe, john.doe@example.com
+Jane Smith, jane_smith@example.com
+john.doe@example.com, Not Valid Entry
+invalidEmail@domain
