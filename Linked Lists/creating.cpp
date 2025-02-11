@@ -48,6 +48,17 @@ public:
         }
     }
 
+    void pop_front(){
+        if(head == NULL) {
+            cout<<"\n The linked list is empty already"<<endl;
+        } else {
+            Node* temp = head;
+            head = head->next;
+            temp->next = NULL;
+            delete temp;
+        }
+    }
+
     void printLL(){
         Node* temp = head;
 
@@ -65,9 +76,14 @@ int main(){
     ll.push_front(1);
     ll.push_front(2);
     ll.push_front(3);
-    ll.push_back(4);
-    
     ll.printLL();
+
+    ll.push_back(4);
+    ll.printLL();
+
+    ll.pop_front();
+    ll.printLL();
+    
     cout<<endl;
     return 0;
 }
