@@ -51,12 +51,26 @@ public:
     void pop_front(){
         if(head == NULL) {
             cout<<"\n The linked list is empty already"<<endl;
+            return;
         } else {
             Node* temp = head;
             head = head->next;
             temp->next = NULL;
             delete temp;
         }
+    }
+
+    void pop_back(){
+        Node* temp = head;
+        if(head == NULL){
+            cout<<"\n The linked list is empty"<<endl;
+            return;
+        }
+        while(temp->next != tail){
+            temp = temp->next;
+        }
+        temp->next = NULL;
+        delete tail;
     }
 
     void printLL(){
@@ -83,7 +97,9 @@ int main(){
 
     ll.pop_front();
     ll.printLL();
-    
+
+    ll.pop_back();
+    ll.printLL();
     cout<<endl;
     return 0;
 }
