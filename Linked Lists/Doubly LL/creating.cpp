@@ -32,6 +32,21 @@ public:
             head = newNode;
         }
     }
+
+    void print() {
+        if(head == NULL) {
+            cout << "The linked list is empty" <<endl;
+            return;
+        }
+
+        Node* temp = head;
+
+        while(temp != NULL) {
+            cout << temp->data <<" <=> "; 
+            temp = temp->next;
+        }
+        cout << "NULL" << endl;
+    }
 };
 
 int main(){
@@ -41,6 +56,9 @@ int main(){
     dll.push_front(3);
     dll.push_front(2);
     dll.push_front(1);
+
+    dll.print();
+    
     cout<<endl;
     return 0;
 }
