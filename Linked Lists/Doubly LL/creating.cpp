@@ -47,6 +47,11 @@ public:
     }
 
     void pop_front() {
+        if(head == NULL) {
+            cout << "The doubly linked list is empty" << endl;
+            return;
+        }
+        
         Node* temp = head;
 
         head =  head->next;
