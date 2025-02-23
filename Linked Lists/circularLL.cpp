@@ -26,18 +26,42 @@ public:
         if(head == NULL) {
             head = tail = newNode;
             tail->next = head;
-            return;
         } else {
             newNode->next = head;
             head = newNode;
             tail->next = head;
         }
     }
+
+    void print() {
+        if(head == NULL) {
+            cout << "\n The linked list is empty" << endl;
+            return;
+        }
+
+        cout << head->data << " -> ";
+        Node* temp = head->next;
+
+        while(temp != head) {
+            cout << temp->data << " -> ";
+            temp = temp->next;
+        }
+
+        cout << temp->data << endl;
+    }
 };
 
 int main() {
     
-    
+    circularLL cll;
+    cll.insertHead(5);
+    cll.insertHead(4);
+    cll.insertHead(3);
+    cll.insertHead(2);
+    cll.insertHead(1);
+
+    cout << "The original linked list: " << endl;
+    cll.print();
     cout<<endl;
     return 0;
 }
