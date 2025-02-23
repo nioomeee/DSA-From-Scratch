@@ -43,6 +43,10 @@ public:
             return;
         }else{
             for( int i = 0; i < pos-1; i++ ){
+                if(temp == NULL){
+                    cout<<"\n Invalid position"<<endl;
+                    return;
+                }
                 temp = temp->next;
             }
             Node* newNode = new Node(val);
