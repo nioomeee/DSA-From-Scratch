@@ -51,7 +51,7 @@ public:
             cout << "The doubly linked list is empty" << endl;
             return;
         }
-        
+
         Node* temp = head;
 
         head =  head->next;
@@ -60,6 +60,23 @@ public:
             head->prev = NULL;
         }
         temp->next = NULL;
+        delete temp;
+    }
+
+    void pop_back() {
+        if(head == NULL) {
+            cout << "\nThe linked list is empty" << endl;
+            return;
+        }
+        Node* temp = tail;
+
+        tail = tail->prev;
+
+        if(tail != NULL){
+            tail->next = NULL;
+        }
+
+        temp->prev = NULL;
         delete temp;
     }
 
@@ -97,7 +114,11 @@ int main(){
     dll.print();
 
     dll.pop_front();
-    cout << "Updated Linked list: " << endl;
+    cout << "Updated Linked list after pop_front: " << endl;
+    dll.print();
+
+    dll.pop_back();
+    cout << "Updated Linked list after pop_back: " << endl;
     dll.print();
 
     cout << endl;
