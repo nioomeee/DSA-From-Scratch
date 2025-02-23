@@ -57,7 +57,7 @@ public:
             Node* temp = head;
             head = head->next;
             tail->next = head;
-            
+
             temp->next = NULL;
             delete temp;
         }
@@ -67,9 +67,23 @@ public:
         if(head == NULL) {
             cout << "the linked list is empty" << endl;
             return;
+        } else if(head == tail) {
+            delete head;
+            head = tail = NULL;
         } else {
             Node* temp = tail;
-            
+
+            Node* prev = head;
+
+            while(prev->next != tail) {
+                prev = prev->next;
+            }
+
+            tail = prev;
+            tail->next = head;
+
+            temp->next = NULL;
+            delete temp;
         }
     }
 
@@ -110,6 +124,11 @@ int main() {
     cll.delHead();
     cout << "The updated linked list after deleting at head: " << endl;
     cll.print();
+
+    cll.delTail();
+    cout << "The updated linked list after deleting at tail: " << endl;
+    cll.print();
+
     cout<<endl;
     return 0;
 }
