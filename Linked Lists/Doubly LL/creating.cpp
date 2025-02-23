@@ -33,6 +33,19 @@ public:
         }
     }
 
+    void push_back(int val) {
+        Node* newNode = new Node(val);
+
+        if(head == NULL) {
+            head = tail = newNode;
+        } else {
+            newNode->prev = tail;
+            tail->next = newNode;
+            tail = newNode;
+        }
+
+    }
+
     void print() {
         if(head == NULL) {
             cout << "The linked list is empty" <<endl;
@@ -57,8 +70,15 @@ int main(){
     dll.push_front(2);
     dll.push_front(1);
 
+    cout << "\n Og linked list: " << endl;
     dll.print();
+
+    dll.push_back(400);
+    dll.push_back(560);
     
-    cout<<endl;
+    cout << "Updated Linked list: " << endl;
+    dll.print();
+
+    cout << endl;
     return 0;
 }
