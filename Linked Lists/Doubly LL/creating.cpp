@@ -46,6 +46,18 @@ public:
 
     }
 
+    void pop_front() {
+        Node* temp = head;
+
+        head =  head->next;
+
+        if(head != NULL) {
+            head->prev = NULL;
+        }
+        temp->next = NULL;
+        delete temp;
+    }
+
     void print() {
         if(head == NULL) {
             cout << "The linked list is empty" <<endl;
@@ -76,6 +88,10 @@ int main(){
     dll.push_back(400);
     dll.push_back(560);
     
+    cout << "Updated Linked list: " << endl;
+    dll.print();
+
+    dll.pop_front();
     cout << "Updated Linked list: " << endl;
     dll.print();
 
