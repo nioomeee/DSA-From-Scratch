@@ -52,14 +52,13 @@ int main(){
     s.pushval(20);
     s.pushval(30);
 
-    cout << "Top element = " <<s.top() << endl;;
+    cout << "Top element = " <<s.top() << endl;
 
-    s.pop();
-    cout << "Top element after pop = " << s.top() << endl;;
-
-    s.pop();
-    s.pop();
-    s.pop(); //should print stack underflow
+    //printing the stack
+    while(!s.isEmpty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
 
     cout<<endl;
 
