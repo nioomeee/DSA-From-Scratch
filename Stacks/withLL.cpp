@@ -24,15 +24,15 @@ public:
         head = tail = NULL;
     }
 
-    void push_front(int val) {
+    void push_back(int val) {
         Node* newNode = new Node(val);
 
         if(head == NULL) {
             head = tail = newNode;
             return;
         } else {
-            newNode->next = head;
-            head = newNode;
+            tail->next = newNode;
+            tail = newNode;
         }
     }
 
@@ -71,7 +71,7 @@ public:
     List l;
 
     void pushval(int val) {
-        l.push_front(val);
+        l.push_back(val);
     }
 
     void pop() {
